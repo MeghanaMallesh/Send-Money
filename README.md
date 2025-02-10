@@ -1,16 +1,101 @@
-# send_money
+# Send Money App
 
-A new Flutter project.
+A Flutter-based Send Money application that allows users to log in, check their wallet balance, send money, and view transaction history.
 
-## Getting Started
+## 📌 Features
 
-This project is a starting point for a Flutter application.
+- **User Authentication**: Login screen with validation
+- **Wallet Balance**: Display available balance
+- **Send Money**: Transfer funds securely
+- **Transaction History**: View past transactions
+- **Offline Mode Support**
+- **Unit Tests** for core functionalities
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Screens
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. **Login Screen** - User authentication form
+2. **Wallet Screen** - Displays user balance
+3. **Send Money Screen** - Allows fund transfers
+4. **Transaction History** - List of past transactions
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+- **Flutter** (Dart)
+- **State Management**: Provider / Riverpod
+- **Networking**: Dio
+- **Storage**: Hive for local storage
+- **Unit Testing**: Flutter Test, Mockito
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Flutter SDK (Latest Version)
+- Dart
+- Android Studio / VS Code
+
+### Installation
+
+```sh
+# Clone the repository
+git clone https://github.com/yourusername/send_money.git
+cd send_money
+
+# Install dependencies
+flutter pub get
+```
+
+### Run Application
+
+```sh
+flutter run
+```
+
+### Run Tests
+
+```sh
+flutter test
+```
+
+## 📂 Project Structure
+
+```
+lib/
+├── core/
+│   ├── utils/
+│   ├── theme/
+│   ├── network/
+│   └── storage/
+├── features/
+│   ├── login/
+│   │   ├── screens/
+│   │   ├── widgets/
+│   │   └── providers/
+│   ├── wallet/
+│   ├── send_money/
+│   ├── transactions/
+├── main.dart
+```
+
+## 🧪 Testing
+
+We use **Mockito** for unit testing. Example test:
+
+```dart
+testWidgets('Validates login form fields', (WidgetTester tester) async {
+  await tester.pumpWidget(MaterialApp(home: LoginScreen()));
+  await tester.tap(find.text('Login'));
+  await tester.pump();
+  expect(find.text('Please enter username'), findsOneWidget);
+});
+```
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+Developed by **Your Name** 🚀
+
+Meghana AM
